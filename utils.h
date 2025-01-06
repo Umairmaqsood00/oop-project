@@ -4,7 +4,6 @@
 #include<string>
 #include<fstream>
 using namespace std;
-
 const int MAX = 5;
 
 class login {
@@ -60,11 +59,9 @@ public:
 		return n;
 	}
 
-	string* getfriends() const {
+string* getfriends() const {
 		return friends;
 	}
-
-
 };
 
 class Comments 
@@ -84,10 +81,10 @@ public:
 	string gettext() const {
 		return text;
 	}
-	string getlikes() const {
+	
+        string getlikes() const {
 		return likes;
 	}
-
 	void setname(string n) {
 		name = n;
 	}
@@ -585,7 +582,7 @@ public:
 				}
 
 			}
-		}//cout << c << endl;
+		}
 		char c4;
 		cout << "Do you want to share your opinion : ";
 		cin >> c4;
@@ -620,7 +617,7 @@ public:
 		int post = 0;
 		
 		while (getline(f, s)) {
-			if (s == "Pages information") {
+			if (s == "Pages information :") {
 				
 				flag = true;
 				break;
@@ -689,11 +686,11 @@ public:
 		cout << "Total messages: " << messageCount << endl;
 
 		int messageIndex = 0;
-		cout << "Enter the number of the message you want to reply to (0 to cancel): ";
+		cout << "Enter the no of the messages you want to reply to (0 to cancel): ";
 		cin >> messageIndex;
 
 		if (messageIndex < 1 || messageIndex > messageCount) {
-			cout << "Invalid selection. Exiting." << endl;
+			cout << "Invalid selection Exiting." << endl;
 			delete[] messages;
 			return;
 		}
