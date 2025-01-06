@@ -28,13 +28,13 @@ public:
 	}
 };
 
+
 class personalinfo {
 
 	string s;
 	string b;
 	string n;
 	string* friends = new string[10];
-
 public:
 	void setname(string n) {
 		s = n;
@@ -52,7 +52,8 @@ public:
 		return b;
 	}
 
-	void getnotification(string s) {
+
+void getnotification(string s) {
 		n = s;
 	}
 
@@ -63,8 +64,6 @@ public:
 	string* getfriends() const {
 		return friends;
 	}
-
-
 };
 
 class Comments 
